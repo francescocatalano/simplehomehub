@@ -27,7 +27,7 @@ class DeviceList extends Component
         console.log('is obje');
         console.log(obj);
         console.log('endobje');
-      return <li key={ obj.short_name }><img src={obj.icon}/>{obj.name}</li>;
+      return <li key={ obj.short_name }><img alt={obj.name} src={obj.icon}/>{obj.name}</li>;
     })}
   </ul>
 

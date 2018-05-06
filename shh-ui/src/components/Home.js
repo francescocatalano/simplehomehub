@@ -1,7 +1,4 @@
 import React, { Component } from 'react';
-
-import DeviceList from './DeviceList'
-
 export default class Home extends Component {
 
     constructor(props) {
@@ -21,4 +18,3 @@ export default class Home extends Component {
         </div>
     }
 }
-

@@ -1,7 +1,6 @@
-import React, {PropTypes} from 'react';
+import React from 'react';
 import {connect} from 'react-redux';
 import ComponentList from './ComponentList';
-import * as componentActions from '../actions/componentActions';
 
 class ComponentsPage extends React.Component {
     render(){
