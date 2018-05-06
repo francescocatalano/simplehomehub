@@ -2,7 +2,6 @@ import React from 'react';
 
 const ComponentList = ({components}) => {
 
-  console.log(components);
   return (
       <ul className="list-group">
           {components.map(component =>
@@ -13,5 +12,7 @@ const ComponentList = ({components}) => {
       </ul>
   );
 };
+
+/* TODO propTypes */
 
 export default ComponentList;

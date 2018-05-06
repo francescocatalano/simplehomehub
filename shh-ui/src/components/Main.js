@@ -2,7 +2,7 @@ import React from 'react'
 import {Switch, Route} from 'react-router-dom'
 import Home from './Home'
 import Test from './Test'
-import ComponentsPage from './ComponentsPage';
+import ComponentsPage from './containers/ComponentsPage';
 
 // The Main component renders one of the three provided
 // Routes (provided that one matches). Both the /roster

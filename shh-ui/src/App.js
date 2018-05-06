@@ -10,8 +10,6 @@ class App extends Component {
       <div id="page_container">
         <Header />
         <Main />
-           APPLICATION PAGE
-          {this.props.children}
       </div>
     );
   }
