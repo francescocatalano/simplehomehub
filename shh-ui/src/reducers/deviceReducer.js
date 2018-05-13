@@ -1,12 +1,10 @@
 import * as types from '../constants/action-types';
 import initialState from './initialState';
 
-export default function componentReducer(state = initialState.components, action){
+export default function deviceReducer(state = initialState.devices, action){
     switch(action.type){
-        case types.LOAD_COMPONENT_SUCCESS:
-            return action.component;
-        case types.LOAD_COMPONENTS_SUCCESS:
-            return action.components;
+        case types.LOAD_DEVICES_SUCCESS:
+            return action.devices;
         default:
             console.log('return default state');
             console.log(state);

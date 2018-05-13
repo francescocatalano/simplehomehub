@@ -12,6 +12,21 @@ export function loadComponents(){
     }
 }
 
+export function loadComponent(id){
+    return function(dispatch) {
+        return componentApi.getComponent(id)
+            .then(component => {
+                dispatch(loadComponentSuccess(component));
+            }).catch(error => {
+                throw(error);
+            });
+    }
+}
+
 export function loadComponentsSuccess(components){
     return {type: types.LOAD_COMPONENTS_SUCCESS ,components};
+}
+
+export function loadComponentSuccess(component){
+    return {type: types.LOAD_COMPONENT_SUCCESS , component};
 }

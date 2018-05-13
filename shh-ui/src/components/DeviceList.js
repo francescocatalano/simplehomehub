@@ -1,37 +1,28 @@
-import React, { Component } from 'react';
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-class DeviceList extends Component
-{
-  state = {
-    response: false
-  };
 
-  callApi = async () => {
-    // const response = await fetch('http://localhost:3000/api/components');
-    // const body = await response.json();
-    // if (response.status !== 200) throw Error(body.message);
-    // console.log(body);
-    // return body;
-  };
+const DeviceList = ({devices}) => {
 
-  componentDidMount() {
-    // this.callApi()
-    //   .then(res => this.setState({ response: res.express }))
-    //   .catch(err => console.log(err));
-  }
+  const list = <ul className="list-group">
+            {
+              devices.map(device =>
+                <li className="list-group-item" key={device.identity}>
+                  {device.name}
+                  <Link to={`/device/${device.identity}`}> --> </Link>
+                </li>
+              )
+            }
+        </ul>;
 
-  render(){
+  if(devices)
+    return list;
 
-    return <ul>
-      {this.state.response && this.state.response.map(function(obj){
-        console.log('is obje');
-        console.log(obj);
-        console.log('endobje');
-      return <li key={ obj.short_name }><img alt={obj.name} src={obj.icon}/>{obj.name}</li>;
-    })}
-  </ul>
+  return (
+    <span class="badge badge-light">Loading</span>
+  );
+};
 
-  }
+/* TODO propTypes */
 
-}
 export default DeviceList;

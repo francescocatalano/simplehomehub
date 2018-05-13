@@ -9,7 +9,7 @@ class ComponentsPage extends React.Component {
             <div className="row">
                 <div className="col-md-12">
                     <h1>COMPONENTI</h1>
-                    <ComponentList components={this.props.components}/>
+                    <ComponentList {...this.props}/>
                 </div>
             </div>
         )

@@ -15,6 +15,7 @@ const Header = () => (
         <ul className="navbar-nav mr-auto">
           <NavLink activeOnlyWhenExact={true} to="/" label="Home Control"/>
           <NavLink to="/components" label="Components"/>
+          <NavLink to="/devices" label="Devices"/>
         </ul>
       </div>
     </nav>
