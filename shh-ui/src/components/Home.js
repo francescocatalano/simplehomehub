@@ -1,20 +1,13 @@
-import React, { Component } from 'react';
-export default class Home extends Component {
+import React from 'react';
 
-    constructor(props) {
-        super(props);
-        this.state = {
-        };
-    }
+const Home = () => (
+  <div className="row">
+      HOME!!!
+      <div className="col-md-12 m-0 p-0">
+          <div className="d-block p-2 bg-light text-white text-right">
+          </div>
+      </div>
+  </div>
+)
 
-
-    render() {
-        return <div className="row">
-            HOME!!!
-            <div className="col-md-12 m-0 p-0">
-                <div className="d-block p-2 bg-light text-white text-right">
-                </div>
-            </div>
-        </div>
-    }
-}
+export default Home

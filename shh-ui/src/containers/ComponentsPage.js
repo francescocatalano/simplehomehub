@@ -1,7 +1,7 @@
 import React from 'react';
-import {connect} from 'react-redux';
-import { loadComponents } from '../../actions/componentActions';
-import ComponentList from '../ComponentList';
+import { connect } from 'react-redux';
+import { loadComponents } from '../actions/componentsActions';
+import ComponentList from '../components/ComponentList';
 
 class ComponentsPage extends React.Component {
     render(){

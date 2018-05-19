@@ -1,7 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import { loadDevices } from '../../actions/devicesActions';
-import DeviceList from '../DeviceList';
+import { loadDevices } from '../actions/devicesActions';
+import DeviceList from '../components/DeviceList';
 
 class DevicesPage extends React.Component {
     render(){

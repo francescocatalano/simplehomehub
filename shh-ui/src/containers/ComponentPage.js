@@ -1,14 +1,14 @@
 import React from 'react';
-import {connect} from 'react-redux';
-import { loadComponent } from '../../actions/componentActions';
-import Component from '../Component';
+import { connect } from 'react-redux';
+import { loadComponent } from '../actions/componentActions';
+import Component from '../components/Component';
 
 class ComponentPage extends React.Component {
     render(){
       return(
           <div className="row">
               <div className="col-md-12">
-                  <h1>{this.props.component.id}</h1>
+                  <h1>{this.props.match.params.id}</h1>
                   <Component {...this.props}/>
               </div>
           </div>
