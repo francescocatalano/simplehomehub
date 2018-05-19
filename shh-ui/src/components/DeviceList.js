@@ -1,6 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-
+import { Icon } from 'react-icons-kit'
+import { searchPlus } from 'react-icons-kit/fa/searchPlus'
 
 const DeviceList = ({devices}) => {
   return (
@@ -8,9 +9,11 @@ const DeviceList = ({devices}) => {
       <ul className="list-group">
         {
           devices.map(device =>
-            <li className="list-group-item" key={device.identity}>
-              {device.name}
-              <NavLink to={'/device/' + device.identity}> --> DET </NavLink>
+            <li className="list-group-item  text-right" key={device.identity}>
+              <span className="float-left">{device.name}</span>
+              <NavLink to={'/device/' + device.identity}>
+                <Icon icon={searchPlus} />
+              </NavLink>
             </li>
           )
         }

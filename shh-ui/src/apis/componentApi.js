@@ -15,6 +15,14 @@ class ComponentApi {
             return error;
         });
     }
+
+    static installComponent(id){
+        return fetch('http://localhost:4000/api/components/' + id + '/install').then(response => {
+            return response.json();
+        }).catch(error => {
+            return error;
+        });
+    }
 }
 
 export default ComponentApi;

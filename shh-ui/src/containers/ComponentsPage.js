@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { loadComponents } from '../actions/componentsActions';
+import { loadComponents, installComponent } from '../actions/componentsActions';
 import ComponentList from '../components/ComponentList';
 
 class ComponentsPage extends React.Component {
@@ -9,7 +9,7 @@ class ComponentsPage extends React.Component {
             <div className="row">
                 <div className="col-md-12">
                     <h1>COMPONENTI</h1>
-                    <ComponentList {...this.props}/>
+                    <ComponentList onComponentClick={this.props.onComponentClick} components={this.props.components}/>
                 </div>
             </div>
         )
@@ -29,6 +29,7 @@ const mapStateToProps = (state, ownProps) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
+    onComponentClick : (id) => dispatch(installComponent(id)),
     init : () => dispatch(loadComponents())
   };
 };
