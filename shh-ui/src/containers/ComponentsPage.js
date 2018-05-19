@@ -23,7 +23,7 @@ class ComponentsPage extends React.Component {
 
 const mapStateToProps = (state, ownProps) => {
   return {
-      components: state.components
+      components: Array.isArray(state.components) ? state.components : []
   };
 };
 

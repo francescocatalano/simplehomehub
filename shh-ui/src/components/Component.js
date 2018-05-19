@@ -2,7 +2,7 @@ import React from 'react';
 
 const Component = ({component}) => {
   return (
-    !component ? <span class="badge badge-light">Loading</span> :
+    !component ? <span className="badge badge-light">Loading</span> :
       <div className="card">
          <div className="card-body">
            <h5 className="card-title">{component.name}</h5>

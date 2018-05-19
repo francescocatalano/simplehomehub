@@ -22,7 +22,7 @@ class DevicesPage extends React.Component {
 
 const mapStateToProps = (state, ownProps) => {
   return {
-      devices : state.devices
+      devices : Array.isArray(state.devices) ? state.devices : []
   };
 };
 

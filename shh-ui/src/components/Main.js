@@ -4,6 +4,7 @@ import Home from './Home'
 import ComponentsPage from '../containers/ComponentsPage';
 import ComponentPage from '../containers/ComponentPage';
 import DevicesPage from '../containers/DevicesPage';
+import DevicePage from '../containers/DevicePage';
 
 // The Main component renders one of the three provided
 // Routes (provided that one matches). Both the /roster
@@ -21,6 +22,7 @@ const Main = () => (
                     <Route path="/components" component={ComponentsPage} />
                     <Route path="/component/:id" component={ComponentPage} />
                     <Route path="/devices" component={DevicesPage} />
+                    <Route path="/device/:id" component={DevicePage} />
                 </Switch>
             </div>
         </div>
